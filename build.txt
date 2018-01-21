@@ -1,0 +1,7 @@
+try to build tensorflow with windows
+
+follow steps here, it can work. 
+
+https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/cmake
+
+cmake .. -A x64 -DCMAKE_BUILD_TYPE=Release  -DSWIG_EXECUTABLE=D:/tensorflow/swigwin-3.0.12/swig.exe -DPYTHON_EXECUTABLE=C:/Anaconda3/envs/tensorflow/python.exe -DPYTHON_LIBRARIES=C:/Anaconda3/envs/tensorflow/libs -Dtensorflow_WIN_CPU_SIMD_OPTIONS=/arch:AVX2
