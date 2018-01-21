@@ -1,7 +1,27 @@
-try to build tensorflow with windows
+
+
+
+2018.1.21 
+
+***********************************try to build tensorflow with windows 10******************************************************
 
 follow steps here, it can work. 
 
 https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/cmake
 
 cmake .. -A x64 -DCMAKE_BUILD_TYPE=Release  -DSWIG_EXECUTABLE=D:/tensorflow/swigwin-3.0.12/swig.exe -DPYTHON_EXECUTABLE=C:/Anaconda3/envs/tensorflow/python.exe -DPYTHON_LIBRARIES=C:/Anaconda3/envs/tensorflow/libs -Dtensorflow_WIN_CPU_SIMD_OPTIONS=/arch:AVX2
+
+MSBuild /p:Configuration=Release tf_python_build_pip_package.vcxproj
+
+then u get whl here
+
+pip install D:\tensorflow\tensorflow\tensorflow\contrib\cmake\build\tf_python\dist\tensorflow-1.5.0rc1-cp35-cp35m-win_amd64.whl
+
+
+download anaconda
+https://www.anaconda.com/download/
+
+vs tool for AI
+https://www.visualstudio.com/downloads/ai-tools-vs/
+
+create an enviroment for each project seems to be good
